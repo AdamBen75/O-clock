@@ -1,6 +1,7 @@
 /*************************
  * HORLOGE
  *************************/
+
 function updateClock() {
   const el = document.getElementById('clock-time');
   if (!el) return;
@@ -29,6 +30,7 @@ setInterval(updateClock, 500);
 /*************************
  * MINUTEUR
  *************************/
+
 let timerSeconds = 60;
 let timerInterval = null;
 
@@ -115,9 +117,10 @@ window.addEventListener("DOMContentLoaded", () => {
 /*************************
  * CHRONOMÈTRE
  *************************/
+
 let swInterval = null;
 let swStartTime = 0;
-let swElapsedTime = 0; // en ms
+let swElapsedTime = 0; // en miliseconde
 
 function updateStopwatchDisplay() {
   const el = document.getElementById("stopwatch-time");
@@ -175,6 +178,7 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("stopwatch-reset").onclick = resetStopwatch;
   document.getElementById("stopwatch-lap").onclick = addLap;
 });
+
 /*************************
  * RÉVEILS
  *************************/
@@ -230,5 +234,4 @@ if (alarmForm) {
   };
 }
 
-// Vérifier toutes les 30 secondes
 setInterval(checkAlarms, 30000);
